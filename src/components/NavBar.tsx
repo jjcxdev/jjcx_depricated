@@ -8,7 +8,7 @@ function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <nav className="fixed left-0 top-0 z-50 w-full overflow-hidden bg-white bg-opacity-50 backdrop-blur">
-      <div className="flex h-10 content-center justify-between px-10 align-middle">
+      <div className="flex h-10 content-center justify-between px-10 align-middle md:justify-center">
         {/* HAMBURGER BUTTON FOR MOBILE */}
         <div className="flex items-center md:hidden">
           <button
