@@ -38,11 +38,12 @@ const Hero = () => {
       </h1>
       <div className="flex w-full max-w-lg items-center justify-between px-10 text-4xl lg:p-0">
         <button
-          onClick={() => window.open("https://medium.com/@jjcx", "_blank")}
-          className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full  bg-cyan-500 px-10 text-white shadow-md hover:bg-pink"
+          onClick={() => window.open("/resume_justinchambers.pdf", "_blank")}
+          className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full bg-cyan-500 px-10 text-white shadow-md hover:bg-pink"
         >
-          <span className=" text-sm font-bold uppercase">Resume</span>
+          <span className="text-sm font-bold uppercase">Resume</span>
         </button>
+
         <div className="flex gap-2 lg:gap-8">
           <button
             onClick={() => window.open("https://github.com/jjcxdev", "_blank")}
