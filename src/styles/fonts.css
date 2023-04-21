@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "gobold";
+  src: url("/fonts/Gobold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ethnocentric";
+  src: url("/fonts/ethnocentric-rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

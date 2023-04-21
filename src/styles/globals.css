@@ -3,17 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  background-color: white;
 }
 
 body {
@@ -24,4 +14,104 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.active {
+  color: white;
+  border-radius: 100%;
+  padding: 0.5rem;
+}
+
+.section {
+  @apply flex items-center py-10 lg:my-20;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #fe0fb5, #09e9f0);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.html {
+  background-color: #e44d26;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.css {
+  background-color: #2965f1;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.js {
+  background-color: #f7df1e;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.ts {
+  background-color: #007acc;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.react {
+  background-color: #61dafb;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.swift {
+  background-color: #ffac45;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.figma {
+  background-color: #f24e1e;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+.python {
+  background-color: #3776ab;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.ps {
+  background-color: #31a8ff;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+
+.ai {
+  background-color: #ff9a00;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+.tw {
+  background-color: #38b2ac;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
+}
+.njs {
+  background-color: #000000;
+  color: white;
+  text-transform: uppercase;
+  font-size: x-small;
 }
