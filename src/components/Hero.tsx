@@ -49,14 +49,14 @@ const Hero = () => {
             onClick={() => window.open("https://github.com/jjcxdev", "_blank")}
             className="flex cursor-pointer flex-col items-center justify-center rounded-md bg-white shadow-md"
           >
-            <BsGithub className="p-4 text-7xl text-cyan-500 hover:text-pink lg:text-8xl" />
+            <BsGithub className="p-4 text-6xl text-cyan-500 hover:text-pink" />
           </button>
 
           <button
             onClick={() => window.open("https://medium.com/@jjcx", "_blank")}
             className="flex cursor-pointer flex-col items-center justify-center rounded-md bg-white shadow-md"
           >
-            <BsMedium className="p-4 text-7xl text-cyan-500 hover:text-pink lg:text-8xl" />
+            <BsMedium className="p-4 text-6xl text-cyan-500 hover:text-pink " />
           </button>
         </div>
       </div>
