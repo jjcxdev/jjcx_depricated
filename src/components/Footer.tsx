@@ -1,11 +1,7 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
-import { BsMedium } from "react-icons/bs";
 import { HiHome } from "react-icons/hi";
-import { IoDocumentTextSharp } from "react-icons/io5";
-import { BsGithub } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const Footer: React.FC = () => {
