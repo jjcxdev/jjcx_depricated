@@ -18,9 +18,20 @@ const Work: React.FC = () => {
                 project="website"
                 blurb="I decided to include my own portfolio in this section, simply because its been a considerable amount of work. I have made several different itteractions up untl this point. It was also my introduction into React. I had built it with vanilla html, css and javascript, but I was encouraged by a friend to learn a framework, and well Next.js/React was it."
                 github={["https://github.com/jjcxdev/jjcx"]}
-                link={["https://www.jjcx.dev"]}
+                link="https://www.jjcx.dev"
                 languages={["HTML", "CSS", "TS", "REACT", "FIGMA", "AI"]}
                 img="/imgs/jjcx_web.jpg"
+              />
+            </div>
+            <div className="">
+              <WorkCard
+                title="PixlPal"
+                project="website"
+                blurb="Along with the app itself, I build the PixlPal site. This is a primary requirement for Apple App Store products, and hopefully after I fix a few bugs I'll be able to resubmit and have it distributed on the App Store."
+                github={["https://github.com/jjcxdev/pixlpal_web"]}
+                link="https://pixlpal.vercel.app"
+                languages={["HTML", "CSS", "TS", "REACT", "FIGMA"]}
+                img="/imgs/pp.jpg"
               />
             </div>
             <div className="">
@@ -29,7 +40,7 @@ const Work: React.FC = () => {
                 project="website"
                 blurb="This site is actively under construction with the client. As they decide which direction they want to go, I am making modifications routinely. This was also a project built in vanilla html, css, js. But after learning so much building my own site in React, I decided to reconfigure this into it as well."
                 github={["https://github.com/jjcxdev/fernficus"]}
-                link={["https://fernficus.netlify.app"]}
+                link="https://fernficus.netlify.app"
                 languages={["HTML", "CSS", "JS", "REACT", "FIGMA"]}
                 img="/imgs/ff.jpg"
               />
@@ -40,20 +51,21 @@ const Work: React.FC = () => {
                 project="macOS app"
                 blurb="I wanted to make an app that would speed up my productivity when it comes to design. I know there are some apps out there that already do this, but I wanted the challenge of making my own thing. PixlPal is a macOS app that allows you to select any color on your screen and automatically save it to your clipboard. You can choose between HSL, RGB, and HEX for your color format."
                 github={["https://github.com/jjcxdev/PixlPal"]}
-                link={[]}
+                link={undefined}
                 languages={["SWIFT"]}
-                img="/imgs/pixl.jpg"
+                img="/imgs/pixlpal_logo_new.png"
+                showShadow={false}
               />
             </div>
             <div className="">
               <WorkCard
-                title="PixlPal"
-                project="website"
-                blurb="Along with the app itself, I build the PixlPal site. This is a primary requirement for Apple App Store products, and hopefully after I fix a few bugs I'll be able to resubmit and have it distributed on the App Store."
-                github={["https://github.com/jjcxdev/pixlpal_web"]}
-                link={["https://pixlpal.vercel.app"]}
-                languages={["HTML", "CSS", "TS", "REACT", "FIGMA"]}
-                img="/imgs/pp.jpg"
+                title="Auto Dialer"
+                project="program"
+                blurb="This was a project of spite. Tired of relentless calls from a certain company (even though I am registered with the NDNCL, and requested they stop calling me multiple times over several years), I decided to fight back. After confirming with the CRTC that there were no limitations on how many times I could call a private Canadian company, I went to work and unleashed this fun little program. I may or may not have shut down the AVR system after bombarding them with a call every 5 seconds for 10 minutes, until their system flagged and blocked my outbound number. But its only $1 to buy a new number from Twilio. I haven't used this since, but I keep it around for safe keepings."
+                github={["https://github.com/jjcxdev/dialer"]}
+                link={undefined}
+                languages={["PYTHON"]}
+                img="/imgs/dialer.jpg"
               />
             </div>
           </div>
@@ -68,9 +80,10 @@ interface WorkCardProps {
   project: string;
   blurb: string;
   github: string[];
-  link: string[];
+  link?: string;
   languages: string[];
   img: string;
+  showShadow?: boolean;
 }
 
 const WorkCard: React.FC<WorkCardProps> = ({
@@ -81,9 +94,14 @@ const WorkCard: React.FC<WorkCardProps> = ({
   link,
   languages,
   img,
+  showShadow = true, // set default value to true
 }) => {
+  const imgClasses = showShadow
+    ? "shadow-lg lg:max-w-md rounded-md "
+    : "lg:max-w-md"; // add this line
+
   return (
-    <div className="m-4 my-8 overflow-hidden rounded-md p-4 shadow-lg lg:max-w-6xl ">
+    <div className="m-4 my-8 overflow-hidden rounded-md bg-white p-4 shadow-lg lg:max-w-6xl ">
       <div className="flex flex-col lg:flex-row">
         <div className="order-2 w-full lg:order-1">
           <div>
@@ -102,11 +120,11 @@ const WorkCard: React.FC<WorkCardProps> = ({
                   <SiGithub className="hover:text-pink" />
                 </a>
               ))}
-              {link.map((link) => (
-                <a key={link} href={link}>
+              {link && (
+                <a href={link}>
                   <SlGlobe className="hover:text-pink" />
                 </a>
-              ))}
+              )}
             </div>
             <div className="font-poppins mt-2 flex gap-2">
               {languages.map((language) => (
@@ -123,7 +141,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
         <div className="order-1 flex content-center items-center justify-center pb-10 lg:order-2">
           {img && (
             <div className="">
-              <img src={img} alt={title} className=" shadow-lg lg:max-w-2xl" />
+              <img src={img} alt={title} className={imgClasses} />
             </div>
           )}
         </div>

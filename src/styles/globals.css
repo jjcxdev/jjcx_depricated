@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: white;
+  background-color: rgb(249, 249, 249);
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 }
 
 .active {
-  color: white;
+  color: #00bcd4;
   border-radius: 100%;
   padding: 0.5rem;
 }
@@ -26,7 +26,9 @@ body {
   @apply flex items-center py-10 lg:my-20;
 }
 
-.gradient-text {
+.gradient-text,
+.hero,
+.links {
   background: linear-gradient(to right, #fe0fb5, #09e9f0);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -35,83 +37,20 @@ body {
   -moz-text-fill-color: transparent;
 }
 
-.html {
-  background-color: #e44d26;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.css {
-  background-color: #2965f1;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.js {
-  background-color: #f7df1e;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.ts {
-  background-color: #007acc;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.react {
-  background-color: #61dafb;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.swift {
-  background-color: #ffac45;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.figma {
-  background-color: #f24e1e;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-.python {
-  background-color: #3776ab;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.ps {
-  background-color: #31a8ff;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-
-.ai {
-  background-color: #ff9a00;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
-.tw {
-  background-color: #38b2ac;
-  color: white;
-  text-transform: uppercase;
-  font-size: x-small;
-}
+.html,
+.css,
+.js,
+.ts,
+.react,
+.swift,
+.figma,
+.python,
+.ps,
+.ai,
+.tw,
 .njs {
-  background-color: #000000;
-  color: white;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
   text-transform: uppercase;
   font-size: x-small;
 }

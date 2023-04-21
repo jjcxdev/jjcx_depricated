@@ -1,11 +1,12 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
+import { BsMedium } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 const Hero = () => {
   return (
     <div
-      className="section flex h-screen flex-col justify-center bg-white text-center"
+      className="section flex h-screen flex-col justify-center text-center"
       id="home"
     >
       <div className="relative h-[150px] w-full lg:h-[300px]">
@@ -32,12 +33,32 @@ const Hero = () => {
           />
         </div>
       </div>
-      <h1 className="font-source text-xl font-light lowercase text-black">
-        but you can call me
+      <h1 className="font-poppins hero mb-4 text-4xl font-light uppercase lg:text-7xl">
+        Justin Chambers
       </h1>
-      <span className="font-ethnocentric text-7xl font-black uppercase text-pink">
-        Justin
-      </span>{" "}
+      <div className="flex w-full max-w-lg items-center justify-between px-10 text-4xl lg:p-0">
+        <button
+          onClick={() => window.open("https://medium.com/@jjcx", "_blank")}
+          className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full  bg-cyan-500 px-10 text-white shadow-md hover:bg-pink"
+        >
+          <span className=" text-sm font-bold uppercase">Resume</span>
+        </button>
+        <div className="flex gap-2 lg:gap-8">
+          <button
+            onClick={() => window.open("https://github.com/jjcxdev", "_blank")}
+            className="flex cursor-pointer flex-col items-center justify-center rounded-md bg-white shadow-md"
+          >
+            <BsGithub className="p-4 text-7xl text-cyan-500 hover:text-pink lg:text-8xl" />
+          </button>
+
+          <button
+            onClick={() => window.open("https://medium.com/@jjcx", "_blank")}
+            className="flex cursor-pointer flex-col items-center justify-center rounded-md bg-white shadow-md"
+          >
+            <BsMedium className="p-4 text-7xl text-cyan-500 hover:text-pink lg:text-8xl" />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

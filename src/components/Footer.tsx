@@ -10,9 +10,9 @@ import { Link } from "react-scroll";
 
 const Footer: React.FC = () => {
   return (
-    <nav className="fixed bottom-1 z-50 w-full overflow-hidden  lg:bottom-8">
+    <nav className="fixed bottom-1 z-50 hidden w-full  overflow-hidden md:block lg:bottom-8">
       <div className="container mx-auto">
-        <div className="mx-auto flex h-24 w-full max-w-lg items-center justify-between rounded-full bg-black/20 px-8 text-xl text-white/50 backdrop-blur-2xl">
+        <div className="mx-auto flex h-24 w-full max-w-lg items-center justify-around rounded-full bg-black/20 px-8 text-4xl text-white/50 backdrop-blur-2xl">
           <Link
             to="home"
             activeClass="active"
@@ -43,36 +43,6 @@ const Footer: React.FC = () => {
             <MdWork className="hover:text-pink" />
             <span className="mt-2 text-xs uppercase text-white">Work</span>
           </Link>
-
-          <a
-            href="https://www.linkedin.com/in/justinjchambers/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-16 w-16 cursor-pointer flex-col items-center justify-center"
-          >
-            <BsGithub className="hover:text-pink" />
-            <span className="mt-2 text-xs uppercase text-white">GitHub</span>
-          </a>
-
-          <a
-            href="https://medium.com/@jjcx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-16 w-16 cursor-pointer flex-col items-center justify-center"
-          >
-            <BsMedium className="hover:text-pink" />
-            <span className="mt-2 text-xs uppercase text-white">Medium</span>
-          </a>
-
-          <a
-            href="https://github.com/jjcxdev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-16 w-16 cursor-pointer flex-col items-center justify-center"
-          >
-            <BsGithub className="hover:text-pink" />
-            <span className="mt-2 text-xs uppercase text-white">GitHub</span>
-          </a>
         </div>
       </div>
     </nav>
