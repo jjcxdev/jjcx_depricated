@@ -16,7 +16,7 @@ const Work: React.FC = () => {
               <WorkCard
                 title="JJCX"
                 project="website"
-                blurb="I decided to include my own portfolio in this section, simply because its been a considerable amount of work. I have made several different itteractions up untl this point. It was also my introduction into React. I had built it with vanilla html, css and javascript, but I was encouraged by a friend to learn a framework, and well Next.js/React was it."
+                blurb="I decided to include my own portfolio in this section, simply because its been a considerable amount of work. I have made several different itterations up untl this point. It was also my introduction into React. I had built it with vanilla html, css and javascript, but I was encouraged by a friend to learn a framework, and well Next.js/React was it."
                 github={["https://github.com/jjcxdev/jjcx"]}
                 link="https://www.jjcx.dev"
                 languages={["HTML", "CSS", "TS", "REACT", "FIGMA", "AI"]}
