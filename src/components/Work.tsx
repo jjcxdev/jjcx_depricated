@@ -50,7 +50,7 @@ const Work: React.FC = () => {
                 title="PixlPal"
                 project="macOS app"
                 blurb="I wanted to make an app that would speed up my productivity when it comes to design. I know there are some apps out there that already do this, but I wanted the challenge of making my own thing. PixlPal is a macOS app that allows you to select any color on your screen and automatically save it to your clipboard. You can choose between HSL, RGB, and HEX for your color format."
-                github={["https://github.com/jjcxdev/PixlPal"]}
+                github={["https://github.com/jjcxdev/PixlPal_free"]}
                 link={undefined}
                 languages={["SWIFT"]}
                 img="/imgs/pixlpal_logo_new.png"
@@ -130,8 +130,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
               {languages.map((language) => (
                 <span
                   key={language}
-                  className={`rounded-md px-2 py-1 text-sm font-bold ${language.toLowerCase()}`}
-                >
+                  className={`rounded-md px-2 py-1 text-sm font-bold ${language.toLowerCase()}`}>
                   {language}
                 </span>
               ))}
