@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 import Image from "next/image";
+import { useState } from "react";
 
 const Nav: React.FC = () => {
   return (
