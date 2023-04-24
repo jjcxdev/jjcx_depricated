@@ -101,28 +101,28 @@ const WorkCard: React.FC<WorkCardProps> = ({
     : "lg:max-w-md"; // add this line
 
   return (
-    <div className="m-4 my-8 overflow-hidden rounded-md bg-white p-4 shadow-lg lg:max-w-6xl ">
+    <div className="m-4 my-8 overflow-hidden rounded-md bg-neutral-800 p-4 shadow-lg lg:max-w-6xl ">
       <div className="flex flex-col lg:flex-row">
         <div className="order-2 w-full lg:order-1">
           <div>
-            <h3 className="font-poppins text-4xl font-bold uppercase lg:pt-8">
+            <h3 className="font-poppins text-4xl font-bold uppercase text-neutral-400 lg:pt-8">
               {title}
             </h3>
           </div>
           <div className="">
-            <h4 className="font-source  text-pink">{project}</h4>
+            <h4 className="font-source  text-white">{project}</h4>
           </div>
           <div className="font-poppins py-10 pb-2 lg:w-10/12">{blurb}</div>
           <div className="">
             <div className="my-8 flex gap-4 text-4xl text-gray-600 ">
               {github.map((link) => (
                 <a key={link} href={link}>
-                  <SiGithub className="hover:text-pink" />
+                  <SiGithub className="hover:text-cyan-500" />
                 </a>
               ))}
               {link && (
                 <a href={link}>
-                  <SlGlobe className="hover:text-pink" />
+                  <SlGlobe className="hover:text-cyan-500" />
                 </a>
               )}
             </div>

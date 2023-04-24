@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Nav from "../components/Nav";
 import NavBar from "@/components/NavBar";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -14,7 +13,6 @@ const Home: React.FC = () => {
         <title>JJCX</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      {/* <Nav /> */}
       <NavBar />
       <Hero />
       <About />

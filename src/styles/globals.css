@@ -3,17 +3,14 @@
 @tailwind utilities;
 
 :root {
-  background-color: rgb(249, 249, 249);
+  background-color: #18181a;
+  --accent-pink: #fe0fb5
+  --accent-blue: #09e9f0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #18181a;
+  color: white;
 }
 
 .active {
@@ -49,8 +46,29 @@ body {
 .ai,
 .tw,
 .njs {
-  border: 2px solid #00bcd4;
-  color: #00bcd4;
+  border: 2px solid #0e7490;
+  color: white;
   text-transform: uppercase;
   font-size: x-small;
+}
+
+.html:hover,
+.css:hover,
+.js:hover,
+.ts:hover,
+.react:hover,
+.swift:hover,
+.figma:hover,
+.python:hover,
+.ps:hover,
+.ai:hover,
+.tw:hover,
+.njs:hover {
+  background-color: #0e7490;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.logo {
+  filter: invert(1);
 }

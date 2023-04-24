@@ -7,14 +7,14 @@ const Hero = () => {
   return (
     <div
       className="section flex h-screen flex-col justify-center text-center"
-      id="home"
-    >
-      <div className="relative h-[150px] w-full lg:h-[300px]">
-        <div className="absolute h-full w-full">
+      id="home">
+      <h1 className="font-poppins mb-4 flex flex-col bg-gradient-to-r from-pink to-blue bg-clip-text text-left text-6xl font-bold uppercase text-transparent lg:text-9xl">
+        Justin <span className="">Chambers</span>
+      </h1>
+      <div className="relative h-[50px] w-full lg:h-[100px]">
+        <div className="absolute inset-0 flex items-center justify-center">
           <TypeAnimation
             sequence={[
-              "frontend developer",
-              500,
               "problem solver",
               500,
               "critical thinker",
@@ -27,37 +27,45 @@ const Hero = () => {
               500,
             ]}
             cursor={false}
-            speed={80}
+            speed={70}
             repeat={Infinity}
-            className="font-poppins gradient-text flex justify-center text-6xl font-bold uppercase lg:text-9xl"
+            className="font-poppins flex justify-center text-3xl font-bold uppercase text-white lg:text-6xl"
           />
         </div>
       </div>
-      <h1 className="font-poppins hero mb-4 text-4xl font-light uppercase lg:text-7xl">
-        Justin Chambers
-      </h1>
-      <div className="flex w-full max-w-lg items-center justify-between px-10 text-4xl lg:p-0">
-        <button
-          onClick={() => window.open("/resume_justinchambers.pdf", "_blank")}
-          className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full bg-cyan-500 px-10 text-white shadow-md hover:bg-pink"
-        >
-          <span className="text-sm font-bold uppercase">Resume</span>
-        </button>
 
-        <div className="flex gap-2 lg:gap-8">
+      <div className="flex justify-between">
+        <div></div>
+        <div className="mt-4 flex w-full items-baseline justify-end gap-2 text-right text-slate-500">
+          ...and
+          <span className="font-poppins text-xl font-bold uppercase text-cyan-500 lg:text-7xl">
+            Frontend Developer
+          </span>
+        </div>
+        <div></div>
+      </div>
+      <div className="md:block lg:hidden">
+        <div className="mt-12 flex w-full max-w-sm items-center justify-between px-8 text-4xl lg:p-0">
           <button
-            onClick={() => window.open("https://github.com/jjcxdev", "_blank")}
-            className="flex cursor-pointer flex-col items-center justify-center rounded-md bg-white shadow-md"
-          >
-            <BsGithub className="p-4 text-6xl text-cyan-500 hover:text-pink" />
+            onClick={() => window.open("/resume_justinchambers.pdf", "_blank")}
+            className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full border-2 border-cyan-900 bg-transparent px-10 text-gray-100 shadow-md hover:bg-gray-600">
+            <span className="text-sm font-bold uppercase">Resume</span>
           </button>
 
-          <button
-            onClick={() => window.open("https://medium.com/@jjcx", "_blank")}
-            className="flex cursor-pointer flex-col items-center justify-center rounded-md bg-white shadow-md"
-          >
-            <BsMedium className="p-4 text-6xl text-cyan-500 hover:text-pink " />
-          </button>
+          <div className="flex gap-2 lg:gap-8">
+            <button
+              onClick={() => window.open("https://medium.com/@jjcx", "_blank")}
+              className="flex cursor-pointer flex-col items-center justify-center rounded-full bg-transparent shadow-md">
+              <BsMedium className="p-1 text-5xl text-gray-100 hover:text-gray-200" />
+            </button>
+            <button
+              onClick={() =>
+                window.open("https://github.com/jjcxdev", "_blank")
+              }
+              className="flex cursor-pointer flex-col items-center justify-center rounded-full bg-transparent shadow-md">
+              <BsGithub className="p-1 text-5xl text-gray-100 hover:text-gray-200" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
