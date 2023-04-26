@@ -97,7 +97,7 @@ const About: React.FC = () => {
                 <div className="font-poppins mx-4 mt-16 text-xl font-light text-white lg:mx-0">
                   Then there are those that I like to tinker with
                 </div>
-                <div className="mx-4 mt-8 grid grid-cols-3 gap-4 text-3xl text-gray-500 lg:m-0 lg:text-8xl">
+                <div className="mx-4 mt-8 grid grid-cols-3 gap-4 text-3xl text-gray-500 lg:m-0 lg:py-6 lg:text-8xl">
                   {tinkerTools.map(({ icon, text }) => (
                     <div className="flex flex-col items-center" key={text}>
                       <div className="flex cursor-pointer flex-col items-center justify-center rounded-full bg-transparent shadow-md">
