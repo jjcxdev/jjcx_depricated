@@ -6,7 +6,7 @@ interface MenuProps {
   onClose: () => void;
 }
 
-const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
+export const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
   return (
     <div className={`menu ${isOpen ? "menu--open" : ""}`}>
       <ul>
@@ -46,5 +46,3 @@ const Menu: FC<MenuProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-
-export default Menu;
