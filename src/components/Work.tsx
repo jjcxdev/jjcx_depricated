@@ -2,7 +2,7 @@ import React from "react";
 import { SiGithub } from "react-icons/si";
 import { SlGlobe } from "react-icons/sl";
 
-const Work: React.FC = () => {
+export const Work: React.FC = () => {
   return (
     <section>
       <div className="section flex flex-col justify-center text-left" id="work">
@@ -27,7 +27,7 @@ const Work: React.FC = () => {
               <WorkCard
                 title="PixlPal"
                 project="website"
-                blurb="Along with the app itself, I build the PixlPal site. This is a primary requirement for Apple App Store products, and hopefully after I fix a few bugs I'll be able to resubmit and have it distributed on the App Store."
+                blurb="Along with the app itself, I build the PixlPal site. This is a primary requirement for Apple App Store products."
                 github={["https://github.com/jjcxdev/pixlpal_web"]}
                 link="https://pixlpal.vercel.app"
                 languages={["HTML", "CSS", "TS", "REACT", "FIGMA"]}
@@ -86,7 +86,7 @@ interface WorkCardProps {
   showShadow?: boolean;
 }
 
-const WorkCard: React.FC<WorkCardProps> = ({
+export const WorkCard: React.FC<WorkCardProps> = ({
   title,
   project,
   blurb,
@@ -110,7 +110,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
             </h3>
           </div>
           <div className="">
-            <h4 className="font-source  text-white">{project}</h4>
+            <h4 className="font-source  text-cyan-500">{project}</h4>
           </div>
           <div className="font-poppins py-10 pb-2 lg:w-10/12">{blurb}</div>
           <div className="">

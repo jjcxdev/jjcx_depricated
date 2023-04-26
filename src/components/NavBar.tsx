@@ -4,11 +4,11 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 
-function NavBar() {
+export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <nav className="fixed left-0 top-0 z-50 w-full overflow-hidden bg-black bg-opacity-50 backdrop-blur">
-      <div className="flex h-10 content-center justify-between px-10 align-middle md:justify-center">
+      <div className="flex h-10 content-center justify-between px-10 align-middle lg:justify-center">
         {/* EMPTY DIV */}
         <div></div>
         {/* LOGO */}
@@ -23,44 +23,42 @@ function NavBar() {
           </Link>
         </div>
         {/* HAMBURGER BUTTON FOR MOBILE */}
-        <div className="flex items-center md:hidden">
+        <div className="flex items-center lg:hidden">
           <button
             className="flex items-center"
             onClick={() => setNavbar(!navbar)}>
             {navbar ? (
-              <AiOutlineClose className="text-xl text-black" />
+              <AiOutlineClose className="text-xl text-gray-400" />
             ) : (
-              <FiMenu className="text-xl text-black" />
+              <FiMenu className="text-xl text-gray-400" />
             )}
           </button>
         </div>
       </div>
 
       <div
-        className={`mt-8 flex-1 justify-self-center md:hidden ${
+        className={`mt-8 flex-1 justify-self-center lg:hidden ${
           navbar ? "block p-12 md:p-0" : "hidden"
         }`}>
-        <ul className="h-screen items-center justify-center md:hidden">
+        <ul className="h-screen items-center justify-center lg:hidden">
           <Link href="/" onClick={() => setNavbar(!navbar)}>
-            <li className="flex justify-center border-b-2  border-b-blue py-10 text-center text-xl text-cyan-500 hover:bg-cyan-500 hover:text-white md:border-b-0 md:px-6 lg:hidden">
+            <li className="flex justify-center border-b-2  border-b-gray-500/50 py-10 text-center text-xl text-cyan-600/50 hover:bg-cyan-500/50 hover:text-white  lg:hidden">
               Home
             </li>
           </Link>
           <Link href="#about" onClick={() => setNavbar(!navbar)}>
-            <li className="flex justify-center border-b-2 py-10 text-center text-xl text-cyan-500 hover:bg-cyan-500 hover:text-white md:border-b-0 md:px-6 lg:hidden">
+            <li className="flex justify-center border-b-2  border-b-gray-500/50 py-10 text-center text-xl text-cyan-600/50 hover:bg-cyan-500/50 hover:text-white  lg:hidden">
               About
             </li>
           </Link>
           <Link href="#work" onClick={() => setNavbar(!navbar)}>
-            <li className="flex justify-center border-b-2 py-10 text-center text-xl text-cyan-500 hover:bg-cyan-500 hover:text-white md:border-b-0 md:px-6 lg:hidden">
+            <li className="flex justify-center border-b-2  border-b-gray-500/50 py-10 text-center text-xl text-cyan-600/50 hover:bg-cyan-500/50 hover:text-white  lg:hidden">
               Work
             </li>
           </Link>
         </ul>
       </div>
-      <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-transparent via-gray-900 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-transparent via-pink/50 to-transparent"></div>
     </nav>
   );
 }
-
-export default NavBar;

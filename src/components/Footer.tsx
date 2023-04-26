@@ -64,7 +64,7 @@ let tabs = [
     label: (
       <span className="flex items-center justify-center gap-2 hover:text-neutral-300">
         <BsGithub className=" text-4xl" />
-        <span className="text-white mix-blend-exclusion ">Github</span>
+        <span className="text-neutral-400 mix-blend-exclusion ">Github</span>
       </span>
     ),
     link: "https://github.com/jjcxdev",
@@ -75,7 +75,7 @@ export default function AnimatedTabs() {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <nav className="fixed bottom-2 z-50 hidden w-full  overflow-hidden md:block lg:bottom-8">
+    <nav className="fixed bottom-2 z-50 hidden w-full overflow-hidden lg:bottom-8 lg:block">
       <div className="container mx-auto">
         <div className="mx-auto flex h-16 w-full max-w-[990px] items-center justify-around rounded-full bg-cyan-500/25 px-4 text-4xl text-white/50 backdrop-blur-2xl">
           <div>
