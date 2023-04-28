@@ -1,6 +1,7 @@
 import React from "react";
 import { SiGithub } from "react-icons/si";
 import { SlGlobe } from "react-icons/sl";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 export const Work: React.FC = () => {
   return (
@@ -100,12 +101,39 @@ export const WorkCard: React.FC<WorkCardProps> = ({
     ? "shadow-lg lg:max-w-md rounded-md "
     : "lg:max-w-md"; // add this line
 
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
+
+  console.log("render");
+
+  function handleMouseMove(
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) {
+    const { clientX, clientY, currentTarget } = event;
+    const bounds = currentTarget.getBoundingClientRect();
+
+    let xPosition = clientX - bounds.left;
+    let yPosition = clientY - bounds.top;
+
+    mouseX.set(xPosition);
+    mouseY.set(yPosition);
+  }
+
   return (
-    <div className="m-4 my-8 overflow-hidden rounded-md bg-neutral-800 p-4 shadow-lg lg:max-w-6xl ">
+    <div
+      onMouseMove={handleMouseMove}
+      className="group relative m-8 my-8  rounded-3xl bg-neutral-800 p-10 shadow-lg lg:max-w-6xl">
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px , rgb(14 165 233 / 0.15), transparent 90%`,
+        }}
+      />
+
       <div className="flex flex-col lg:flex-row">
         <div className="order-2 w-full lg:order-1">
           <div>
-            <h3 className="font-poppins text-4xl font-bold uppercase text-neutral-400 lg:pt-8">
+            <h3 className="font-poppins text-4xl font-bold uppercase text-neutral-400 ">
               {title}
             </h3>
           </div>
@@ -137,7 +165,7 @@ export const WorkCard: React.FC<WorkCardProps> = ({
             </div>
           </div>
         </div>
-        <div className="order-1 flex content-center items-center justify-center pb-10 lg:order-2">
+        <div className="order-1 flex content-center items-center justify-center pb-10 md:pb-0 lg:order-2">
           {img && (
             <div className="">
               <img src={img} alt={title} className={imgClasses} />
