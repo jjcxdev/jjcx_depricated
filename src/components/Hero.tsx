@@ -8,7 +8,7 @@ export default function Hero() {
     <div
       className="section flex h-screen flex-col justify-center text-center"
       id="home">
-      <h1 className="font-poppins mb-4 flex flex-col bg-gradient-to-r from-pink to-blue bg-clip-text text-left text-6xl font-bold uppercase text-transparent md:text-8xl lg:text-9xl">
+      <h1 className="font-poppins mb-4 flex flex-col bg-gradient-to-b from-white to-neutral-700 bg-clip-text text-left text-6xl font-bold uppercase text-transparent md:text-8xl lg:text-9xl">
         Justin <span className="">Chambers</span>
       </h1>
       <div className="relative h-[50px] w-full lg:h-[100px]">
@@ -29,7 +29,7 @@ export default function Hero() {
             cursor={false}
             speed={70}
             repeat={Infinity}
-            className="font-poppins flex justify-center text-3xl font-bold uppercase text-white lg:text-6xl"
+            className="font-poppins flex justify-center text-3xl font-bold uppercase text-zinc-500 lg:text-6xl"
           />
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function Hero() {
         <div></div>
         <div className="mt-4 flex w-full items-baseline justify-end gap-2 text-right text-slate-500">
           ...and
-          <span className="font-poppins text-xl font-bold uppercase text-cyan-500 lg:text-7xl">
+          <span className="font-poppins text-xl font-bold uppercase text-white lg:text-7xl">
             Frontend Developer
           </span>
         </div>
@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="mt-12 flex w-full  items-center justify-between text-4xl lg:p-0">
           <button
             onClick={() => window.open("/resume_justinchambers.pdf", "_blank")}
-            className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full border-2 border-cyan-900 bg-transparent px-10 text-gray-100 shadow-md hover:bg-gray-600">
+            className="flex h-12 cursor-pointer flex-col items-center justify-center rounded-full border-2 border-zinc-700 bg-transparent px-10 text-gray-100 shadow-md hover:bg-gray-600">
             <span className="text-sm font-bold uppercase">Resume</span>
           </button>
 

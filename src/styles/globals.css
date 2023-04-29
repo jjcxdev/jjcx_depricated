@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 :root {
-  background-color: #18181a;
   --accent-pink: #fe0fb5
   --accent-blue: #09e9f0;
 }
 
 body {
-  background-color: #18181a;
   color: white;
+  background: linear-gradient(90deg,  #0e0e0e 1%, #282828 50%, #0e0e0e 100%);
 }
 
 .active {
@@ -46,7 +45,7 @@ body {
 .ai,
 .tw,
 .njs {
-  border: 2px solid #0e7490;
+  border: 2px solid #3F3F45;
   color: white;
   text-transform: uppercase;
   font-size: x-small;
@@ -64,11 +63,13 @@ body {
 .ai:hover,
 .tw:hover,
 .njs:hover {
-  background-color: #0e7490;
-  border: 2px solid white;
+  background-color: #3F3F45;
+  border: 2px solid rgba(255, 255, 255, 0.334);
+  transition: 300ms;
   cursor: pointer;
 }
 
 .logo {
   filter: invert(1);
 }
+

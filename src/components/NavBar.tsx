@@ -42,23 +42,23 @@ export default function NavBar() {
         }`}>
         <ul className="h-screen items-center justify-center lg:hidden">
           <Link href="/" onClick={() => setNavbar(!navbar)}>
-            <li className="flex justify-center border-b-2  border-b-gray-500/50 py-10 text-center text-xl text-cyan-600/50 hover:bg-cyan-500/50 hover:text-white  lg:hidden">
+            <li className="flex justify-center border-b-2  border-b-gray-500/10 py-10 text-center text-xl text-neutral-300 hover:bg-black/50 hover:text-white/50  lg:hidden">
               Home
             </li>
           </Link>
           <Link href="#about" onClick={() => setNavbar(!navbar)}>
-            <li className="flex justify-center border-b-2  border-b-gray-500/50 py-10 text-center text-xl text-cyan-600/50 hover:bg-cyan-500/50 hover:text-white  lg:hidden">
+            <li className="flex justify-center border-b-2  border-b-gray-500/10 py-10 text-center text-xl text-neutral-300 hover:bg-black/50 hover:text-white/50  lg:hidden">
               About
             </li>
           </Link>
           <Link href="#work" onClick={() => setNavbar(!navbar)}>
-            <li className="flex justify-center border-b-2  border-b-gray-500/50 py-10 text-center text-xl text-cyan-600/50 hover:bg-cyan-500/50 hover:text-white  lg:hidden">
+            <li className="flex justify-center border-b-2  border-b-gray-500/10 py-10 text-center text-xl text-neutral-300 hover:bg-black/50 hover:text-white/50  lg:hidden">
               Work
             </li>
           </Link>
         </ul>
       </div>
-      <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-transparent via-pink/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
     </nav>
   );
 }
