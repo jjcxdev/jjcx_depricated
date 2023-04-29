@@ -49,7 +49,7 @@ const About: React.FC = () => {
         className="section flex flex-col justify-center text-center"
         id="about">
         <div className="">
-          <div className="font-poppins bg-gradient-to-r from-pink to-blue bg-clip-text text-center text-6xl font-bold text-transparent lg:text-9xl">
+          <div className="font-poppins bg-gradient-to-b from-white to-zinc-800 bg-clip-text pb-10 text-center text-7xl font-bold text-white/25 md:text-8xl lg:text-9xl">
             <span>ABOUT</span>
           </div>
           <div>

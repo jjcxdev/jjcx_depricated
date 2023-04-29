@@ -64,7 +64,7 @@ let tabs = [
     label: (
       <span className="flex items-center justify-center gap-2 hover:text-neutral-300">
         <BsGithub className=" text-4xl" />
-        <span className="text-neutral-400 mix-blend-exclusion ">Github</span>
+        <span className="text-white mix-blend-exclusion ">Github</span>
       </span>
     ),
     link: "https://github.com/jjcxdev",
@@ -77,7 +77,7 @@ export default function AnimatedTabs() {
   return (
     <nav className="fixed bottom-2 z-50 hidden w-full overflow-hidden lg:bottom-8 lg:block">
       <div className="container mx-auto">
-        <div className="mx-auto flex h-16 w-full max-w-[990px] items-center justify-around rounded-full bg-cyan-500/25 px-4 text-4xl text-white/50 backdrop-blur-2xl">
+        <div className="mx-auto flex h-16 w-full max-w-[990px] items-center justify-around rounded-full border-[1px] border-black/10 bg-black/25 px-4 text-4xl text-white/50 backdrop-blur-2xl">
           <div>
             <div className="flex gap-24 space-x-1">
               {tabs.map((tab) => (
@@ -90,20 +90,23 @@ export default function AnimatedTabs() {
                   key={tab.id}>
                   <button
                     onClick={() => {
-                      if (tab.id === "medium") {
+                      if (
+                        tab.id === "resume" ||
+                        tab.id === "medium" ||
+                        tab.id === "github"
+                      ) {
                         window.open(tab.link, "_blank");
                       } else {
-                        window.open(tab.link, "_blank");
+                        setActiveTab(tab.id);
                       }
-                      setActiveTab(tab.id);
                     }}
                     className={`${
                       activeTab === tab.id ? "" : ""
-                    } relative px-8 py-1.5 text-center text-sm font-medium text-white outline-2 outline-sky-400 transition focus-visible:outline`}>
+                    } relative px-8 py-1.5 text-center text-sm font-medium text-white outline-2 outline-white/10 transition focus-visible:outline`}>
                     {activeTab === tab.id && (
                       <motion.div
                         layoutId="active-pill"
-                        className="absolute inset-0 bg-cyan-500/25"
+                        className="absolute inset-0 bg-black/50"
                         style={{ borderRadius: 9999 }}
                         transition={{
                           type: "spring",
