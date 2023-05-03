@@ -7,9 +7,11 @@
   --accent-blue: #09e9f0;
 }
 
-body {
+body, html {
   color: white;
-  background: linear-gradient(90deg,  #0e0e0e 1%, #282828 50%, #0e0e0e 100%);
+  
+background: linear-gradient(to right, rgba(14,14,14,1) 0%,rgba(255, 255, 255, 0) 50%,rgba(14,14,14,1) 100%);
+background-color:#3e3e3e ;
 }
 
 .active {

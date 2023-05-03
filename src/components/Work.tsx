@@ -12,7 +12,7 @@ export const Work: React.FC = () => {
           <div className="font-poppins bg-gradient-to-b from-white to-zinc-800 bg-clip-text pb-10 text-center text-7xl font-bold text-white/25 md:text-8xl lg:text-9xl">
             WORK
           </div>
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div className="grid grid-cols-1 justify-items-center gap-10 lg:grid-cols-2">
             <div className="">
               <WorkCard
                 title="JJCX"
